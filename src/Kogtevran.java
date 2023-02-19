@@ -1,4 +1,4 @@
-public class Kogtevran extends OverAll {
+public class Kogtevran extends Hogvarts {
     private int smart;
     private int wise;
     private int witty;
@@ -42,5 +42,15 @@ public class Kogtevran extends OverAll {
 
     public void setCreative(int creative) {
         this.creative = creative;
+    }
+    private int calcSum(){
+        return this.smart + this.wise + this.creative + this.witty;
+    }
+    public void compare(Kogtevran kogtevran) {
+        if (this.calcSum() > kogtevran.calcSum()) {
+            System.out.println(this.getName() + " лучше, чем " + kogtevran.getName());
+        } else {
+            System.out.println(kogtevran.getName() + " лучше, чем " + this.getName());
+        }
     }
 }

@@ -1,4 +1,6 @@
-public class Gryffindor extends OverAll{
+import org.w3c.dom.ls.LSOutput;
+
+public class Gryffindor extends Hogvarts{
     private int nobility;
     private int honor;
     private int courage;
@@ -33,5 +35,16 @@ public class Gryffindor extends OverAll{
     public void setCourage(int courage) {
         this.courage = courage;
     }
+    private int calcSum(){
+        return this.nobility + this.honor + this.courage;
+    }
+    public void compare(Gryffindor gryffindor) {
+        if (this.calcSum() > gryffindor.calcSum()) {
+            System.out.println(this.getName() + " лучше, чем " + gryffindor.getName());
+        } else {
+            System.out.println(gryffindor.getName() + " лучше, чем " + this.getName());
+        }
+    }
+
 }
 

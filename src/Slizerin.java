@@ -1,4 +1,4 @@
-public class Slizerin extends OverAll{
+public class Slizerin extends Hogvarts{
     private int cunning;
     private int determination;
     private int ambition;
@@ -42,5 +42,15 @@ public class Slizerin extends OverAll{
 
     public void setOverbearing(int overbearing) {
         this.overbearing = overbearing;
+    }
+    private int calcSum(){
+        return this.cunning + this.determination + this.ambition + this.overbearing;
+    }
+    public void compare(Slizerin slizerin) {
+        if (this.calcSum() > slizerin.calcSum()) {
+            System.out.println(this.getName() + " лучше, чем " + slizerin.getName());
+        } else {
+            System.out.println(slizerin.getName() + " лучше, чем " + this.getName());
+        }
     }
 }
